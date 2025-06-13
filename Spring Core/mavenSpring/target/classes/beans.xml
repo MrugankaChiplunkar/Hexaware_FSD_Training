@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotation-based configuration -->
+    <context:annotation-config />
+
+    <!-- Define Address bean with id 'home' -->
+    <bean id="home" class="demoMaven.mavenSpring.Address">
+        <property name="hno" value="101"/>
+        <property name="city" value="Pune"/>
+        <property name="pcode" value="411001"/>
+    </bean>
+
+    <!-- Define Address bean with id 'university' -->
+    <bean id="university" class="demoMaven.mavenSpring.Address">
+        <property name="hno" value="201"/>
+        <property name="city" value="Delhi"/>
+        <property name="pcode" value="110011"/>
+    </bean>
+
+    <!-- Define Student bean, let Spring inject Address via annotations -->
+    <bean id="s1" class="demoMaven.mavenSpring.Student" />
+
+</beans>

@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="b1" class="com.springannot.example.SpringBook.Book" autowire="byType">
+    <property name="code" value="101"/>
+    <property name="name" value="If Tomorrow Comes"/>
+    <property name="price" value="700"/>
+</bean>
+
+<bean>
+<property name="sales">
+                 
+              <map>
+              
+              <entry key="pune" value="3000"/>
+              
+                            <entry key="delhi" value="4000"/>
+              
+              
+              </map>
+        
+                </property>
+                </bean>
+
+</beans>
